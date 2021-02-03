@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- * main- EP
- *
- * return = 0
+ * main
+ * return
  */
 
 int main(void)

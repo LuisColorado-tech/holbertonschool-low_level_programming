@@ -4,7 +4,7 @@
 /**
  * main - positive_or_negative
  *
- * return: 0 positive_negative
+ * Return: 0 positive_negative
  */
 int main(void)
 {

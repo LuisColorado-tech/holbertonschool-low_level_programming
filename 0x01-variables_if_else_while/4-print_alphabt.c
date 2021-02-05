@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
+ * LG
  * exept q and e
- * Return: Always 0 
+ * Return: Always 0 F
  */
 int main(void)
 {

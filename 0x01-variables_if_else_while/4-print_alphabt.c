@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * description: program that prints alphabets in
+ * 
  * exept q and e
- * Return: Always 0 (Success)
+ * Return: Always 0 
  */
 int main(void)
 {

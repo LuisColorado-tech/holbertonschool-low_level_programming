@@ -2,8 +2,8 @@
 /**
  * main - E p
  * description: print single number in base 10
- * LG
- * Return: Always 0 P10
+ * 
+ * Return: Always 0
  */
 int main(void)
 {

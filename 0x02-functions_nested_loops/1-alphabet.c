@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - prints the letters from a to z in lowercase
+ * print_alphabet - prints the letters from a to z in lowercase
  * Description: use _putchar.c
  * Return: 0
  */

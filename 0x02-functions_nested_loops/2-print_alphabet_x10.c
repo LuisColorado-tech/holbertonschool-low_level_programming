@@ -5,19 +5,17 @@
  * Return: 0 L
  */
 void print_alphabet_x10(void)
+
 {
-	int A;
-	int B = 0;
-	
-	while (B < 10)
+	char c;
+	char d;
+
+	for (c = 0; c <= 9; c++)
 	{
-		A = 'a';
-		while (A <= 'z')
+		for (d = 'a'; d <= 'z'; d++)
 		{
-			_putchar(A);
-			A++;
+			_putchar(d);
 		}
-			_putchar('\n');
-			B++;
+		_putchar('\n');
 	}
 }

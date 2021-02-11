@@ -1,6 +1,6 @@
-#include "dhk.h"
+#include "holberton.h"
 /**
- *print_most_numbers - Prints the numbers excluding 2 and 4
+ *print_most_numbers - P t n e 2 a 4
  *
  *Return: void
  */

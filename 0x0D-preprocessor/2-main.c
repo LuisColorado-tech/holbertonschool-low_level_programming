@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
- * main - function to print the name of the file it was compiled from
+ * main - prints file name of file
  *
- * Return: 0 
+ * Return: always 0
  */
 int main(void)
 {

@@ -19,7 +19,7 @@ void print_s(va_list string)
 	{
 		printf("(nil)");
 	}
-		printf("%s", va_arg (string, char*));
+		printf("%s", va_arg(string, char*));
 }
 /**
  * print_f - prints float numbers
@@ -52,6 +52,7 @@ void print_all(const char * const format, ...)
 	};
 	va_list arguments;
 	int x = 0, i = 0;
+	
 	va_start(arguments, format);
 	while (format && format[x])
 	{
@@ -62,8 +63,11 @@ void print_all(const char * const format, ...)
 			{
 				
 				print_any[i].f(arguments);
+				if (format[x + 1])
+				{
 				printf(",");
 				printf(" ");
+				}
 			}
 			i++;
 		}

@@ -53,20 +53,22 @@ void print_all(const char * const format, ...)
 	va_list arguments;
 	int x = 0, i = 0;
 	
-	va_start(arguments, format);
+		va_start(arguments, format);
 	while (format && format[x])
 	{
-		if (format[x] == *(print_any[i].dt))
-            {
-                    (print_any[i].f)(arguments);
-                    if (format[x + 1])
-                            printf(", ");
-                    x++;
-            }
-            i++;
-            (i == 4) ? (i = 0, x++): 0;
-    }
-    printf("\n");
-    va_end(arguments);
+		i = 0;
+		while (print_any[i].dt)
+		{
+			if (*print_any[i].dt == format[x])
+			{
+				print_any[i].f(arguments);
+				printf(",");
+				printf(" ");
+			}
+			i++;
+		}
+		x++;
+	}
+	printf("\n");
+	va_end(arguments);
 }
-		

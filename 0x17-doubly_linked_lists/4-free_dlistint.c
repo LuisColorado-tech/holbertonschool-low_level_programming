@@ -1,19 +1,22 @@
 #include "lists.h"
 
 /**
- * free_dlistint - print all the elements in the list.
- * @head: the inital pointer to the linked list
- * Return: the number of nodes
+ *free_dlistint - function that free a dlistint_t list.
+ *@head: Linked list
+ *Return: Void
  */
 
 void free_dlistint(dlistint_t *head)
 {
-dlistint_t *temp;
+	if (!head)
+		return;
 
-while (head != NULL)
-{
-temp = head;
-free(temp);
-head = head->next;
+	while (head && head->next)
+	{
+		head = head->next;
+		free(head->prev);
+	}
+
+	free(head);
 }
-}
+

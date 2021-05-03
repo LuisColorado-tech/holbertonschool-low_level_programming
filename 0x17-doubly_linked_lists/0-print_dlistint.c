@@ -1,34 +1,28 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_dlistint - Prints all the elements of a dlistint_t list.
+ * @h: Pointer to the head.
  *
- * Return: Always EXIT_SUCCESS.
- */
-int main(void)
+ * Return: The number of nodes.
+ **/
+size_t print_dlistint(const dlistint_t *h)
 {
-  dlistint_t *head;
-  dlistint_t *new;
-  dlistint_t hello = {8, NULL, NULL};
-  size_t n;
+	const dlistint_t *list = h;
+	int counter = 0;
 
-  head = &hello;
-  new = malloc(sizeof(dlistint_t));
-  if (new == NULL)
-    {
-      dprintf(2, "Error: Can't malloc\n");
-      return (EXIT_FAILURE);
-    }
-  new->n = 9;
-  head->prev = new;
-  new->next = head;
-  new->prev = NULL;
-  head = new;
-  n = print_dlistint(head);
-  printf("-> %lu elements\n", n);
-  free(new);
-  return (EXIT_SUCCESS);
+	if (!h)
+	{
+		return (counter);
+	}
+	else
+	{
+		while (list)
+		{
+			printf("%i\n", list->n);
+			list = list->next;
+			counter++;
+		}
+	}
+	return (counter);
 }
